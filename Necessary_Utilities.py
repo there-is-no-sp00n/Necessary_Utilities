@@ -1,3 +1,10 @@
+'''
+
+Copyright 2021, Aninda Zaman, All rights reserved.
+
+'''
+
+
 class Necessary_Utilities():
     def __init__(self):
         pass
@@ -52,7 +59,7 @@ class Necessary_Utilities():
         time = time.split(' ')                                  # seperate the time and date segments
         time = time[1].split(':')                               # only take the time segment and split it by ':'
 
-        return time
+        return time                                             # return to caller
 
     @staticmethod
     def convert_datetime_to_time_string(datetime):
@@ -60,7 +67,7 @@ class Necessary_Utilities():
         time = time.split(' ')                                  # seperate the time and date segments
         time = time[1]                                          # only take the time segment
         
-        return time
+        return time                                             # return to caller
 
     @staticmethod
     def convert_datetime_return_hour(datetime):
@@ -69,7 +76,7 @@ class Necessary_Utilities():
         time = time[1].split(':')                               # only take the time segment and split it by ':'
         hour = int(time[0])                                     # extract the hour as an int
 
-        return hour
+        return hour                                             # return to caller
 
     @staticmethod
     def convert_datetime_return_minute(datetime):
@@ -78,16 +85,16 @@ class Necessary_Utilities():
         time = time[1].split(':')                               # only take the time segment and split it by ':'
         minute = int(time[1])                                   # extract the hour as an int
 
-        return minute
+        return minute                                           # return to caller
 
     @staticmethod
     def convert_datetime_return_second_int(datetime):
         time = str(datetime)                                    # convert datetime data to string
         time = time.split(' ')                                  # seperate the time and date segments
         time = time[1].split(':')                               # only take the time segment and split it by ':'
-        second = int(float(time[2]))                                   # extract the hour as an int
+        second = int(float(time[2]))                            # extract the hour as an int
 
-        return second
+        return second                                           # return to caller
 
     @staticmethod
     def convert_datetime_return_second_float(datetime):
@@ -96,4 +103,10 @@ class Necessary_Utilities():
         time = time[1].split(':')                               # only take the time segment and split it by ':'
         second = float(time[2])                                 # extract the hour as an int
 
-        return second
+        return second                                           # return to caller
+
+'''
+
+Copyright 2021, Aninda Zaman, All rights reserved.
+
+'''
