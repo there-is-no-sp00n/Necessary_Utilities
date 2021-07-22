@@ -5,6 +5,9 @@ Copyright 2021, Aninda Zaman, All rights reserved.
 '''
 
 
+import requests
+
+
 class Necessary_Utilities():
     def __init__(self):
         pass
@@ -104,6 +107,60 @@ class Necessary_Utilities():
         second = float(time[2])                                 # extract the hour as an int
 
         return second                                           # return to caller
+
+
+
+
+    @staticmethod
+    def get_ip_country_code(ip_address):
+        try:
+            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            js = response.json()
+            country_code = js['countryCode']
+            return country_code
+        except Exception as e:
+            return "Unknown"
+
+    @staticmethod
+    def get_ip_country(ip_address):
+        try:
+            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            js = response.json()
+            country = js['country']
+            return country
+        except Exception as e:
+            return "Unknown"
+
+    @staticmethod
+    def get_ip_region(ip_address):
+        try:
+            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            js = response.json()
+            region = js['region']
+            return region
+        except Exception as e:
+            return "Unknown"
+
+    @staticmethod
+    def get_ip_region_name(ip_address):
+        try:
+            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            js = response.json()
+            region_name = js['regionName']
+            return region_name
+        except Exception as e:
+            return "Unknown"
+
+    @staticmethod
+    def get_ip_city(ip_address):
+        try:
+            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            js = response.json()
+            city = js['city']
+            return city
+        except Exception as e:
+            return "Unknown"
+
 
 '''
 
