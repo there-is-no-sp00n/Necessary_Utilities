@@ -110,6 +110,25 @@ class Necessary_Utilities():
 
 
 
+    @staticmethod
+    def get_ip_continent_code(ip_address):
+        try:
+            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            js = response.json()
+            continent_code = js['continentCode']
+            return continent_code
+        except Exception as e:
+            return "Unknown"
+
+    @staticmethod
+    def get_ip_continent(ip_address):
+        try:
+            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            js = response.json()
+            continent = js['continent']
+            return continent
+        except Exception as e:
+            return "Unknown"
 
     @staticmethod
     def get_ip_country_code(ip_address):
@@ -158,6 +177,16 @@ class Necessary_Utilities():
             js = response.json()
             city = js['city']
             return city
+        except Exception as e:
+            return "Unknown"
+
+    @staticmethod
+    def get_ip_zip(ip_address):
+        try:
+            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            js = response.json()
+            zip = js['zip']
+            return zip
         except Exception as e:
             return "Unknown"
 
