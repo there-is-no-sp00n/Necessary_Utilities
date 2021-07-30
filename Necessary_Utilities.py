@@ -1,6 +1,6 @@
 '''
 
-Copyright 2021, Aninda Zaman, All rights reserved.
+Copyright 2021, Aninda Zaman, All Rights Reserved.
 
 '''
 
@@ -113,7 +113,7 @@ class Necessary_Utilities():
     @staticmethod
     def get_ip_continent_code(ip_address):
         try:
-            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
             js = response.json()
             continent_code = js['continentCode']
             return continent_code
@@ -123,7 +123,7 @@ class Necessary_Utilities():
     @staticmethod
     def get_ip_continent(ip_address):
         try:
-            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
             js = response.json()
             continent = js['continent']
             return continent
@@ -133,7 +133,7 @@ class Necessary_Utilities():
     @staticmethod
     def get_ip_country_code(ip_address):
         try:
-            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
             js = response.json()
             country_code = js['countryCode']
             return country_code
@@ -143,7 +143,7 @@ class Necessary_Utilities():
     @staticmethod
     def get_ip_country(ip_address):
         try:
-            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
             js = response.json()
             country = js['country']
             return country
@@ -153,7 +153,7 @@ class Necessary_Utilities():
     @staticmethod
     def get_ip_region(ip_address):
         try:
-            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
             js = response.json()
             region = js['region']
             return region
@@ -163,7 +163,7 @@ class Necessary_Utilities():
     @staticmethod
     def get_ip_region_name(ip_address):
         try:
-            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
             js = response.json()
             region_name = js['regionName']
             return region_name
@@ -173,7 +173,7 @@ class Necessary_Utilities():
     @staticmethod
     def get_ip_city(ip_address):
         try:
-            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
             js = response.json()
             city = js['city']
             return city
@@ -183,7 +183,7 @@ class Necessary_Utilities():
     @staticmethod
     def get_ip_zip(ip_address):
         try:
-            response = requests.get("http://ip-api.com/json/{}".format(ip_address))
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
             js = response.json()
             zip = js['zip']
             return zip
@@ -193,6 +193,6 @@ class Necessary_Utilities():
 
 '''
 
-Copyright 2021, Aninda Zaman, All rights reserved.
+Copyright 2021, Aninda Zaman, All Rights Reserved.
 
 '''
