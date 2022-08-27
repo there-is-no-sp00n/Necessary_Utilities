@@ -190,6 +190,28 @@ class Necessary_Utilities():
         except Exception as e:
             return "Unknown"
 
+    
+    @staticmethod
+    def get_ip_latitude(ip_address):
+        try:
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
+            js = response.json()
+            zip = js['lat']
+            return zip
+        except Exception as e:
+            return "Unknown"
+
+
+    @staticmethod
+    def get_ip_longitude(ip_address):
+        try:
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
+            js = response.json()
+            zip = js['lon']
+            return zip
+        except Exception as e:
+            return "Unknown"
+
 
 '''
 
