@@ -6,6 +6,7 @@ Copyright 2021, Aninda Zaman, All Rights Reserved.
 
 
 import requests
+import uuid
 
 
 class Necessary_Utilities():
@@ -211,6 +212,14 @@ class Necessary_Utilities():
             return zip
         except Exception as e:
             return "Unknown"
+        
+        
+    # UUID related work
+    
+    @staticmethod
+    def get_uuid4():
+        
+        return uuid.uuid4()
 
 
 '''
